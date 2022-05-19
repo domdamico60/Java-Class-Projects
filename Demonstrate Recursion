@@ -1,0 +1,25 @@
+import java.util.Random; //header to use random function
+public class Main
+{
+    static void printArray(int arr[], int start)
+    {   
+    //Recursion base condition
+        if(start >= 100)
+        return;
+        
+    //Prints the current array element
+        System.out.print(" "+arr[start]);
+    
+    //Recursively call printArray to print next element in the array
+        printArray(arr, start + 1); 
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Dominic D'Amico - Assignment 6\n");
+        Random rand = new Random();
+        int[] arr=new int[100]; //declaration of array
+        for(int loop=0; loop<100; loop++)  //looping 100 times to generate 100 random numbers.
+        {arr[loop] = rand.nextInt(100);}  //generating random numbers till 100 and storing it in the array
+        printArray(arr,0); //calling the function with the array and start value as 0.
+    }
+}
